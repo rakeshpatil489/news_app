@@ -1,9 +1,28 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Everything</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+    <ion-toolbar color="danger">
+      <ion-title style="letter-spacing:1px;font-size:16px;">
+        NEWS<span class="titleName">APP</span> /World
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+  
+      <ion-fab horizontal="end" vertical="top" slot="fixed" edge>
+          <ion-fab-button color="dark">
+            <ion-icon name="arrow-dropdown"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-list>
+             <ion-fab-button color="danger">
+              <ion-icon name="trending-up" (click)="gotoTrending()" ></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button color="danger">
+                <ion-icon name="home" (click)="gotoHome()"></ion-icon>
+              </ion-fab-button>
+            <!-- <ion-fab-button color="danger">
+              <ion-icon name="logo-vimeo"></ion-icon>
+            </ion-fab-button> -->
+          </ion-fab-list>
+        </ion-fab>
+  
+  </ion-content>

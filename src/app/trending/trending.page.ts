@@ -15,6 +15,11 @@ export class TrendingPage implements OnInit {
   ngOnInit() {
   }
 
+  gotoEverthing()
+  {
+   this.router.navigate(["/everything"]);
+  }
+
   gotoHome()
   {
    this.router.navigate(["/home"]);
