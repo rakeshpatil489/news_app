@@ -5,23 +5,27 @@
       <ion-buttons slot="start">
         <ion-back-button defaultHref="home"></ion-back-button>
       </ion-buttons>
-      <ion-title style="letter-spacing:1px;" >
-          NEWS<span class="titleName">APP</span>
-        </ion-title>
+      <ion-title style="letter-spacing:1px;">
+        NEWS<span class="titleName">APP</span>
+      </ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content fullscreen>
+
+    <div class="heading">
+      <ion-label class="headingTitle">Detail's</ion-label>
+    </div>
 
 
     <ion-card class="ion-margin">
       <img [src]="article.urlToImage" />
       <ion-card-header>
         <ion-card-subtitle>{{article.author}}</ion-card-subtitle>
-        <ion-card-title style="font-size: 18px;" >{{article.title}}</ion-card-title>
+        <ion-card-title style="font-size: 16px;">{{article.title}}</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <p>{{article.description}}</p>
+        <p style="text-align: justify; text-justify: newspaper; word-spacing:-1px;">{{article.description}}</p>
         <p class="cardDes">{{article.content}}</p>
         <p style="text-align:center; font-size: 10px;">{{article.source.name}}</p>
       </ion-card-content>
