@@ -11,9 +11,27 @@
   <!-- content -->
   <ion-content fullscreen>
 
+    <ion-fab horizontal="end" vertical="top" slot="fixed" edge>
+      <ion-fab-button color="dark">
+        <ion-icon name="arrow-dropdown"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list>
+        <ion-fab-button color="danger">
+          <ion-icon name="globe" (click)="gotoTrending()"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="danger">
+          <ion-icon name="trending-up"></ion-icon>
+        </ion-fab-button>
+        <!-- <ion-fab-button color="danger">
+          <ion-icon name="logo-vimeo"></ion-icon>
+        </ion-fab-button> -->
+      </ion-fab-list>
+    </ion-fab>
+
     <div class="heading">
       <ion-label class="headingTitle">Top Stories</ion-label>
-      <p class="headingSubtitle">Today, {{currentDate | date:'MMM d,y'}} <ion-badge color="light" style="margin-bottom:-5px;">{{newResult?.totalResults}}</ion-badge></p>
+      <p class="headingSubtitle">Today, {{currentDate | date:'MMM d,y'}} <ion-badge color="light" style="margin-bottom:-5px;">{{newResult?.totalResults}}</ion-badge>
+      </p>
     </div>
 
     <ion-spinner *ngIf="!subscription?.closed" name="circles" color="danger" style="margin-left:45%"></ion-spinner>

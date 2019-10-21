@@ -28,10 +28,15 @@ export class HomePage implements OnInit {
     console.log(this.currentDate);
   }
 
-  getDetailNews(article)
+  getDetailNews(article:number)
   {
     this.newService.currentArticle = article;
     this.router.navigate(["/news-details"]);
+  }
+
+  gotoTrending()
+  {
+    this.router.navigate(["/trending"]);
   }
    
 
