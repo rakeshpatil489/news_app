@@ -13,7 +13,9 @@ export class HomePage implements OnInit {
 
   newResult:any;
   subscription: Subscription;
-  
+
+  //date
+  currentDate: any = new Date();
 
 
   constructor(public newService: NewsService, private router: Router) {}
@@ -23,6 +25,7 @@ export class HomePage implements OnInit {
     this.newResult= data;
     console.log(this.newResult);
     });
+    console.log(this.currentDate);
   }
 
   getDetailNews(article)
@@ -30,5 +33,7 @@ export class HomePage implements OnInit {
     this.newService.currentArticle = article;
     this.router.navigate(["/news-details"]);
   }
+   
+
 
 }
