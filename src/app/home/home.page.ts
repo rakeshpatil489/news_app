@@ -18,7 +18,7 @@ export class HomePage implements OnInit {
   currentDate: any = new Date();
 
 
-  constructor(public newService: NewsService, private router: Router) {}
+  constructor(public newService: NewsService, public router: Router) {}
 
   ngOnInit() {
     this.subscription = this.newService.getData().subscribe((data)=>{
@@ -33,12 +33,16 @@ export class HomePage implements OnInit {
     this.newService.currentArticle = article;
     this.router.navigate(["/news-details"]);
   }
-
+  
   gotoTrending()
   {
     this.router.navigate(["/trending"]);
   }
    
+  gotoEverything()
+  {
+    this.router.navigate(["/everything"]);
+  }
 
 
 }
