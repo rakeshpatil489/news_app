@@ -1,6 +1,7 @@
 import { NewsService } from './../news.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-everything',
@@ -10,11 +11,15 @@ import { Router } from '@angular/router';
 export class EverythingPage implements OnInit {
 
   resultSports: any;
+  subscription: Subscription;
+
+  //date
+  currentDate: any = new Date();
 
   constructor(public router: Router, private newService: NewsService) { }
 
   ngOnInit() {
-    this.newService.getDataSport().subscribe((data) => {
+    this.subscription = this.newService.getDataSport().subscribe((data) => {
       this.resultSports = data;
       console.log(this.resultSports);
     })

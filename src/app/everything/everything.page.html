@@ -1,7 +1,7 @@
 <ion-header>
     <ion-toolbar color="danger">
       <ion-title style="letter-spacing:1px;font-size:16px;">
-        NEWS<span class="titleName">APP</span> /World
+        NEWS<span class="titleName">APP</span>
       </ion-title>
     </ion-toolbar>
   </ion-header>
@@ -19,10 +19,24 @@
             <ion-fab-button color="danger">
                 <ion-icon name="home" (click)="gotoHome()"></ion-icon>
               </ion-fab-button>
-            <!-- <ion-fab-button color="danger">
-              <ion-icon name="logo-vimeo"></ion-icon>
-            </ion-fab-button> -->
           </ion-fab-list>
         </ion-fab>
+
+
+        <div class="heading">
+          <ion-label class="headingTitle">SPORTS <span class="titleName">News</span></ion-label>
+          <p class="headingSubtitle">Today, {{currentDate | date:'MMM d,y'}} <ion-badge color="light" style="margin-bottom:-5px;">{{resultSports?.totalResults}}</ion-badge>
+          </p>
+        </div>
+      
+      
+        <ion-card button *ngFor="let article of resultSports?.articles" class="ion-margin" (click)="getDetailNews(article)">
+          <img [src]="article.urlToImage" />
+          <ion-card-header>
+            <ion-card-subtitle style="margin-bottom:4px;font-size:10px;">{{article.author}}</ion-card-subtitle>
+            <ion-card-title style="font-size:14px;">{{article.title}}</ion-card-title>
+            <p style="font-size: 10px;">{{article.source.name}}</p>
+          </ion-card-header>
+        </ion-card>
   
   </ion-content>

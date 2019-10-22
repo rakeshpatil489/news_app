@@ -1,9 +1,7 @@
 import { NewsService } from './../news.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
-
-
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-trending',
@@ -13,6 +11,7 @@ import { Router } from '@angular/router';
 export class TrendingPage implements OnInit {
 
   resultBusiness: any;
+  subscription: Subscription;
 
   //date
   currentDate: any = new Date();
@@ -21,7 +20,7 @@ export class TrendingPage implements OnInit {
   constructor(public router: Router, private newService: NewsService) { }
 
   ngOnInit() {
-    this.newService.getDataBus().subscribe((data) => {
+    this.subscription = this.newService.getDataBus().subscribe((data) => {
       this.resultBusiness = data;
       console.log(this.resultBusiness);
     });
