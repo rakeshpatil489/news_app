@@ -1,4 +1,28 @@
-.titleName
-{
-   font-weight:200;
+.heading {
+  margin: 12px 8px 12px 10px;
+  padding: 5px 10px;
+  border-bottom: 1px solid rgb(204, 204, 204);
+  color: #6d6d6d;
+}
+.headingTitle {
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+.headingSubtitle {
+  font-size: 11px;
+  font-weight: 400;
+  margin: 1px 2px 3px;
+  color: #c35353;
+}
+
+.titleName {
+  font-weight: 200;
+}
+
+//card styling
+.sc-ion-card-md-h {
+  margin-bottom: 23px;
+  border-radius: 15px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }

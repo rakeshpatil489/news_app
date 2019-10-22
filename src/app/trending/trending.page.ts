@@ -1,5 +1,7 @@
+import { NewsService } from './../news.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 
 
 
@@ -10,18 +12,26 @@ import { Router } from '@angular/router';
 })
 export class TrendingPage implements OnInit {
 
-  constructor(public router : Router) { }
+  resultBusiness: any;
+
+  //date
+  currentDate: any = new Date();
+
+
+  constructor(public router: Router, private newService: NewsService) { }
 
   ngOnInit() {
+    this.newService.getDataBus().subscribe((data) => {
+      this.resultBusiness = data;
+      console.log(this.resultBusiness);
+    });
   }
 
-  gotoEverthing()
-  {
-   this.router.navigate(["/everything"]);
+  gotoEverthing() {
+    this.router.navigate(["/everything"]);
   }
 
-  gotoHome()
-  {
-   this.router.navigate(["/home"]);
+  gotoHome() {
+    this.router.navigate(["/home"]);
   }
 }
