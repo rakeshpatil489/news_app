@@ -1,3 +1,4 @@
+import { NewsService } from './../news.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -8,19 +9,23 @@ import { Router } from '@angular/router';
 })
 export class EverythingPage implements OnInit {
 
-  constructor(public router: Router) { }
+  resultSports: any;
+
+  constructor(public router: Router, private newService: NewsService) { }
 
   ngOnInit() {
+    this.newService.getDataSport().subscribe((data) => {
+      this.resultSports = data;
+      console.log(this.newService);
+    })
   }
 
-  gotoTrending()
-  {
-   this.router.navigate(["/trending"]);
+  gotoTrending() {
+    this.router.navigate(["/trending"]);
   }
 
-  gotoHome()
-  {
-   this.router.navigate(["/home"]);
+  gotoHome() {
+    this.router.navigate(["/home"]);
   }
 
 }
