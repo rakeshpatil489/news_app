@@ -29,6 +29,7 @@
     </p>
   </div>
 
+  <ion-spinner *ngIf="!subscription?.closed" name="circles" color="danger" style="margin-left:45%"></ion-spinner>
 
   <ion-card button *ngFor="let article of resultBusiness?.articles" class="ion-margin" (click)="getDetailNews(article)">
     <img [src]="article.urlToImage" />

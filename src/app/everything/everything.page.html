@@ -28,6 +28,8 @@
           <p class="headingSubtitle">Today, {{currentDate | date:'MMM d,y'}} <ion-badge color="light" style="margin-bottom:-5px;">{{resultSports?.totalResults}}</ion-badge>
           </p>
         </div>
+
+        <ion-spinner *ngIf="!subscription?.closed" name="circles" color="danger" style="margin-left:45%"></ion-spinner>
       
       
         <ion-card button *ngFor="let article of resultSports?.articles" class="ion-margin" (click)="getDetailNews(article)">
