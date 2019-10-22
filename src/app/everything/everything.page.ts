@@ -16,7 +16,7 @@ export class EverythingPage implements OnInit {
   ngOnInit() {
     this.newService.getDataSport().subscribe((data) => {
       this.resultSports = data;
-      console.log(this.newService);
+      console.log(this.resultSports);
     })
   }
 
