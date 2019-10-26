@@ -1,0 +1,7 @@
+{
+  "appId": "com.newsapp.ionicangular",
+  "appName": "News_App",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}

@@ -1,5 +1,7 @@
 {
   "name": "News_App",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
