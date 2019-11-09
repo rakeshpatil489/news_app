@@ -33,4 +33,10 @@ export class SportsPage implements OnInit {
     this.router.navigate(["/news"]);
   }
 
+  getDetailSports(article:number)
+  {
+    this.newService.currentArticleSports = article;
+    this.router.navigate(["/sports-details"]);
+  }
+
 }

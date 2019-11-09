@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'business', loadChildren: './business/business.module#BusinessPageModule' },
   { path: 'sports', loadChildren: './sports/sports.module#SportsPageModule' },
   { path: 'business-details', loadChildren: './business-details/business-details.module#BusinessDetailsPageModule' },
+  { path: 'sports-details', loadChildren: './sports-details/sports-details.module#SportsDetailsPageModule' },
 ];
 
 @NgModule({
