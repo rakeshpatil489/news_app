@@ -31,17 +31,7 @@ export class NewsPage implements OnInit {
   getDetailNews(article:number)
   {
     this.newService.currentArticle = article;
-    this.router.navigate(["/news-details"]);
-  }
-  
-  gotoBusiness()
-  {
-    this.router.navigate(["/business"]);
-  }
-   
-  gotoSports()
-  {
-    this.router.navigate(["/sports"]);
+    this.router.navigate(["tabs/news-details"]);
   }
 
 

@@ -26,18 +26,10 @@ export class BusinessPage implements OnInit {
       console.log(this.resultBusiness);
     });
   }
-
-  gotoEverthing() {
-    this.router.navigate(["/sports"]);
-  }
-
-  gotoNews() {
-    this.router.navigate(["/news"]);
-  }
    
   getDetailBusiness(article:number)
   {
     this.newService.currentArticleBusiness = article;
-    this.router.navigate(["/business-details"]);
+    this.router.navigate(["tabs/business-details"]);
   }
 }

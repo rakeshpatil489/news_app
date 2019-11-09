@@ -8,22 +8,9 @@
     </ion-toolbar>
   </ion-header>
 
+
   <!-- content -->
   <ion-content fullscreen>
-
-    <ion-fab horizontal="end" vertical="top" slot="fixed" edge>
-      <ion-fab-button color="dark">
-        <ion-icon name="arrow-dropdown"></ion-icon>
-      </ion-fab-button>
-      <ion-fab-list>
-        <ion-fab-button color="danger">
-          <ion-icon name="bicycle" (click)="gotoSports()"></ion-icon>
-        </ion-fab-button>
-        <ion-fab-button color="danger">
-          <ion-icon name="trending-up" (click)="gotoBusiness()"></ion-icon>
-        </ion-fab-button>
-      </ion-fab-list>
-    </ion-fab>
 
     <div class="heading">
       <ion-label class="headingTitle">TOP <span class="titleName">storie's</span></ion-label>
@@ -41,9 +28,5 @@
         <p style="font-size: 10px;">{{article.source.name}}</p>
       </ion-card-header>
     </ion-card>
-
-
-
-
   </ion-content>
 </ion-app>

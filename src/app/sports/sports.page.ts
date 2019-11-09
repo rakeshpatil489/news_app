@@ -25,18 +25,10 @@ export class SportsPage implements OnInit {
     })
   }
 
-  gotoBusiness() {
-    this.router.navigate(["/business"]);
-  }
-
-  gotoNews() {
-    this.router.navigate(["/news"]);
-  }
-
   getDetailSports(article:number)
   {
     this.newService.currentArticleSports = article;
-    this.router.navigate(["/sports-details"]);
+    this.router.navigate(["tabs/sports-details"]);
   }
 
 }

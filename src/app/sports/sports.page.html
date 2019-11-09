@@ -1,44 +1,29 @@
 <ion-header>
-    <ion-toolbar color="danger">
-      <ion-title style="letter-spacing:1px;font-size:16px;">
-        NEWS<span class="titleName">APP</span>
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content>
-  
-      <ion-fab horizontal="end" vertical="top" slot="fixed" edge>
-          <ion-fab-button color="dark">
-            <ion-icon name="arrow-dropdown"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-list>
-             <ion-fab-button color="danger">
-              <ion-icon name="trending-up" (click)="gotoBusiness()" ></ion-icon>
-            </ion-fab-button>
-            <ion-fab-button color="danger">
-                <ion-icon name="home" (click)="gotoNews()"></ion-icon>
-              </ion-fab-button>
-          </ion-fab-list>
-        </ion-fab>
+  <ion-toolbar color="danger">
+    <ion-title style="letter-spacing:1px;font-size:16px;">
+      NEWS<span class="titleName">APP</span>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="heading">
+    <ion-label class="headingTitle">SPORTS <span class="titleName">News</span></ion-label>
+    <p class="headingSubtitle">Today, {{currentDate | date:'MMM d,y'}} <ion-badge color="light" style="margin-bottom:-5px;">{{resultBusiness?.totalResults}}</ion-badge>
+    </p>
+  </div>
+
+  <ion-spinner *ngIf="!subscription?.closed" name="circles" color="danger" style="margin-left:45%"></ion-spinner>
 
 
-        <div class="heading">
-          <ion-label class="headingTitle">SPORTS <span class="titleName">News</span></ion-label>
-          <p class="headingSubtitle">Today, {{currentDate | date:'MMM d,y'}} <ion-badge color="light" style="margin-bottom:-5px;">{{resultBusiness?.totalResults}}</ion-badge>
-          </p>
-        </div>
+  <ion-card button *ngFor="let article of resultBusiness?.articles" class="ion-margin" (click)="getDetailSports(article)">
+    <img [src]="article.urlToImage" />
+    <ion-card-header>
+      <ion-card-subtitle style="margin-bottom:4px;font-size:10px;">{{article.author}}</ion-card-subtitle>
+      <ion-card-title style="font-size:14px;">{{article.title}}</ion-card-title>
+      <p style="font-size: 10px;">{{article.source.name}}</p>
+    </ion-card-header>
+  </ion-card>
 
-        <ion-spinner *ngIf="!subscription?.closed" name="circles" color="danger" style="margin-left:45%"></ion-spinner>
-      
-      
-        <ion-card button *ngFor="let article of resultBusiness?.articles" class="ion-margin" (click)="getDetailSports(article)">
-          <img [src]="article.urlToImage" />
-          <ion-card-header>
-            <ion-card-subtitle style="margin-bottom:4px;font-size:10px;">{{article.author}}</ion-card-subtitle>
-            <ion-card-title style="font-size:14px;">{{article.title}}</ion-card-title>
-            <p style="font-size: 10px;">{{article.source.name}}</p>
-          </ion-card-header>
-        </ion-card>
-  
-  </ion-content>
+</ion-content>

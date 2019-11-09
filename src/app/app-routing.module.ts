@@ -1,19 +1,13 @@
 import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'news', pathMatch: 'full' },
-  { path: 'news', loadChildren: () => import('./news/news.module').then( m => m.NewsPageModule)},
-  { path: 'news-details', loadChildren: './news-details/news-details.module#NewsDetailsPageModule' },
-  { path: 'business', loadChildren: './business/business.module#BusinessPageModule' },
-  { path: 'sports', loadChildren: './sports/sports.module#SportsPageModule' },
-  { path: 'business-details', loadChildren: './business-details/business-details.module#BusinessDetailsPageModule' },
-  { path: 'sports-details', loadChildren: './sports-details/sports-details.module#SportsDetailsPageModule' },
+  { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes)
   ],
   exports: [RouterModule]
 })
