@@ -5,11 +5,11 @@ import { Subscription } from 'rxjs';
 
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-news',
+  templateUrl: 'news.page.html',
+  styleUrls: ['news.page.scss'],
 })
-export class HomePage implements OnInit {
+export class NewsPage implements OnInit {
 
   newResult:any;
   subscription: Subscription;

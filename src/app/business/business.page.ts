@@ -30,7 +30,7 @@ export class BusinessPage implements OnInit {
     this.router.navigate(["/sports"]);
   }
 
-  gotoHome() {
-    this.router.navigate(["/home"]);
+  gotoNews() {
+    this.router.navigate(["/news"]);
   }
 }
