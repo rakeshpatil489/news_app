@@ -12,6 +12,7 @@ export class BusinessPage implements OnInit {
 
   resultBusiness: any;
   subscription: Subscription;
+ 
 
   //date
   currentDate: any = new Date();
@@ -32,5 +33,11 @@ export class BusinessPage implements OnInit {
 
   gotoNews() {
     this.router.navigate(["/news"]);
+  }
+   
+  getDetailBusiness(article:number)
+  {
+    this.newService.currentArticleBusiness = article;
+    this.router.navigate(["/business-details"]);
   }
 }

@@ -3,7 +3,7 @@
   <ion-header>
     <ion-toolbar color="danger">
       <ion-buttons slot="start">
-        <ion-back-button defaultHref="news"></ion-back-button>
+        <ion-back-button defaultHref="business"></ion-back-button>
       </ion-buttons>
       <ion-title style="letter-spacing:1px;font-size:16px;">
         NEWS<span class="titleName">APP</span>
@@ -19,15 +19,15 @@
 
 
     <ion-card class="ion-margin">
-      <img [src]="article.urlToImage" />
+      <img [src]="businessArticle.urlToImage" />
       <ion-card-header>
-        <ion-card-subtitle>{{article.author}}</ion-card-subtitle>
-        <ion-card-title style="font-size: 16px;">{{article.title}}</ion-card-title>
+        <ion-card-subtitle>{{businessArticle.author}}</ion-card-subtitle>
+        <ion-card-title style="font-size: 16px;">{{businessArticle.title}}</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <p style="text-align: justify; text-justify:newspaper; word-spacing:-1px;">{{article.description}}</p>
-        <p class="cardDes">{{article.content}}</p>
-        <p style="text-align:center; font-size: 10px;">{{article.source.name}}</p>
+        <p style="text-align: justify; text-justify:newspaper; word-spacing:-1px;">{{businessArticle.description}}</p>
+        <p class="cardDes">{{businessArticle.content}}</p>
+        <p style="text-align:center; font-size: 10px;">{{businessArticle.source.name}}</p>
       </ion-card-content>
     </ion-card>
 

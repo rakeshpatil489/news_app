@@ -1,0 +1,31 @@
+.titleName
+{
+   font-weight:200;
+}
+
+.heading
+{
+   margin:10px 8px 12px 10px;
+   padding:5px 10px;
+   border-bottom: 1px solid rgb(204, 204, 204);
+   color:#6d6d6d;
+}
+.headingTitle
+{
+   font-size:17px;
+   font-weight: bold;
+   letter-spacing: 0.5px;
+   margin-bottom: 3px;
+}
+
+.cardDes
+{
+    margin:10px 0px;
+    text-align: justify; 
+    text-justify: newspaper;
+}
+.sc-ion-card-md-h {
+    border-radius: 15px;
+   //  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+   box-shadow: 0 20px 25px -5px #f2545417, 0 10px 10px -5px #a2a4ab26;
+}

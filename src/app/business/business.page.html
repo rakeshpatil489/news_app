@@ -31,7 +31,7 @@
 
   <ion-spinner *ngIf="!subscription?.closed" name="circles" color="danger" style="margin-left:45%"></ion-spinner>
 
-  <ion-card button *ngFor="let article of resultBusiness?.articles" class="ion-margin" (click)="getDetailNews(article)">
+  <ion-card button *ngFor="let article of resultBusiness?.articles" class="ion-margin" (click)="getDetailBusiness(article)">
     <img [src]="article.urlToImage" />
     <ion-card-header>
       <ion-card-subtitle style="margin-bottom:4px;font-size:10px;">{{article.author}}</ion-card-subtitle>
