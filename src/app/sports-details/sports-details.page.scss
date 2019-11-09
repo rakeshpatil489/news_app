@@ -12,8 +12,8 @@
 }
 .headingTitle
 {
-   font-size:17px;
-   font-weight: bold;
+   font-size:16px;
+   font-weight: 500;
    letter-spacing: 0.5px;
    margin-bottom: 3px;
 }
@@ -28,4 +28,12 @@
     border-radius: 0px;
    //  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
    box-shadow: 0 20px 25px -5px #f2545417, 0 10px 10px -5px #a2a4ab26;
+}
+
+.wideButton
+{
+   font-size: 14px;
+   font-weight: 400;
+   letter-spacing: 0px;
+   text-transform: none;
 }

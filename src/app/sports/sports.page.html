@@ -9,9 +9,8 @@
 <ion-content>
 
   <div class="heading">
-    <ion-label class="headingTitle">SPORTS <span class="titleName">News</span></ion-label>
-    <p class="headingSubtitle">Today, {{currentDate | date:'MMM d,y'}} <ion-badge color="light" style="margin-bottom:-5px;">{{resultBusiness?.totalResults}}</ion-badge>
-    </p>
+    <ion-label class="headingTitle">SPORTS</ion-label>
+    <p class="headingSubtitle">{{currentDate | date:'MMM d,y'}}</p>
   </div>
 
   <ion-spinner *ngIf="!subscription?.closed" name="circles" color="danger" style="margin-left:45%"></ion-spinner>
@@ -20,7 +19,7 @@
   <ion-card button *ngFor="let article of resultBusiness?.articles" class="ion-margin" (click)="getDetailSports(article)">
     <img [src]="article.urlToImage" />
     <ion-card-header>
-      <ion-card-subtitle style="margin-bottom:4px;font-size:10px;">{{article.author}}</ion-card-subtitle>
+      <ion-card-subtitle style="margin-bottom:4px;font-size:10px;color:#b52715;">{{article.author}}</ion-card-subtitle>
       <ion-card-title style="font-size:14px;">{{article.title}}</ion-card-title>
       <p style="font-size: 10px;">{{article.source.name}}</p>
     </ion-card-header>
