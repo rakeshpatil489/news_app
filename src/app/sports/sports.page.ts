@@ -4,11 +4,11 @@ import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-trending',
-  templateUrl: './trending.page.html',
-  styleUrls: ['./trending.page.scss'],
+  selector: 'app-sports',
+  templateUrl: './sports.page.html',
+  styleUrls: ['./sports.page.scss'],
 })
-export class TrendingPage implements OnInit {
+export class SportsPage implements OnInit {
 
   resultBusiness: any;
   subscription: Subscription;
@@ -16,21 +16,21 @@ export class TrendingPage implements OnInit {
   //date
   currentDate: any = new Date();
 
-
   constructor(public router: Router, private newService: NewsService) { }
 
   ngOnInit() {
-    this.subscription = this.newService.getDataBus().subscribe((data) => {
+    this.subscription = this.newService.getDataSport().subscribe((data) => {
       this.resultBusiness = data;
       console.log(this.resultBusiness);
-    });
+    })
   }
 
-  gotoEverthing() {
-    this.router.navigate(["/everything"]);
+  gotoBusiness() {
+    this.router.navigate(["/business"]);
   }
 
   gotoHome() {
     this.router.navigate(["/home"]);
   }
+
 }

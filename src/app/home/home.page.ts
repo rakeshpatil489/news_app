@@ -34,14 +34,14 @@ export class HomePage implements OnInit {
     this.router.navigate(["/news-details"]);
   }
   
-  gotoTrending()
+  gotoBusiness()
   {
-    this.router.navigate(["/trending"]);
+    this.router.navigate(["/business"]);
   }
    
-  gotoEverything()
+  gotoSports()
   {
-    this.router.navigate(["/everything"]);
+    this.router.navigate(["/sports"]);
   }
 
 
