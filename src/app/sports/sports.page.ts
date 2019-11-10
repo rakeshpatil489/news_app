@@ -28,7 +28,7 @@ export class SportsPage implements OnInit {
   getDetailSports(article:number)
   {
     this.newService.currentArticleSports = article;
-    this.router.navigate(["tabs/sports-details"]);
+    this.router.navigate(["/sports-details"]);
   }
 
 }

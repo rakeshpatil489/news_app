@@ -13,6 +13,7 @@ export class NewsDetailsPage implements OnInit {
   constructor(private newsService:NewsService) { }
 
   ngOnInit() {
+    console.log(this.newsService.currentArticle);
     this.article=this.newsService.currentArticle;
   }
 

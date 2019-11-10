@@ -28,10 +28,10 @@ export class NewsPage implements OnInit {
     console.log(this.currentDate);
   }
 
-  getDetailNews(article:number)
+  getDetailNews(article:any)
   {
     this.newService.currentArticle = article;
-    this.router.navigate(["tabs/news-details"]);
+    this.router.navigate(["/news-details"]);
   }
 
 

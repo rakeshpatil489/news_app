@@ -30,6 +30,6 @@ export class BusinessPage implements OnInit {
   getDetailBusiness(article:number)
   {
     this.newService.currentArticleBusiness = article;
-    this.router.navigate(["tabs/business-details"]);
+    this.router.navigate(["/business-details"]);
   }
 }

@@ -6,9 +6,9 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 })
 export class NewsService {
 
-  currentArticle: number;
-  currentArticleBusiness: number;
-  currentArticleSports:number;
+  currentArticle: any;
+  currentArticleBusiness: any;
+  currentArticleSports:any;
 
   apiUrl: string = "https://newsapi.org/v2/top-headlines?";
   apiKey: string = "dd40b5134cfa413d89a0965a6fe7b11f";
